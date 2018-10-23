@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Curso JavaScript desde 0 JQuery VI. Eliminando y reemplazando contenido II. Vídeo 34</title>
+
+<script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
+
+
+	<script type="text/javascript">
+
+       $(document).ready(function(){
+       	//$('#precion').onclick()
+           // alert("esto es una prueba ");
+       	document.getElementById("cerrar").addEventListener("click",cerrar_banner,false);
+       	var imagenes=document.querySelectorAll("#carrete img");
+       	
+       	for (var i=0;i<imagenes.length;i++){
+       		imagenes[i]=addEventListener("click",carrito,false);
+
+       	}
+
+            //alert("For superado");
+
+       	function cerrar_banner(){
+       		$("#banner").remove();
+       	}
+
+       	function carrito(num){
+       		if(num.target==imagen1){
+       		$("#imagen1").replaceWith("<div id='imagen1'>Agregado al carro</div>");
+       		}
+       		if(num.target==imagen2){
+       		$("#imagen2").replaceWith("<div id='imagen2'>Agregado al carro</div>");
+       	     }
+       	     if(num.target==imagen3){
+       		$("#imagen3").replaceWith("<div id='imagen3'>Agregado al carro</div>");
+         	     }
+         	     if(num.target==imagen4){
+       		$("#imagen4").replaceWith("<div id='imagen4'>Agregado al carro</div>");
+       	    }  
+       	}
+       });
+
+	</script>
+</head>
+<body>
+<div style="background-color:10px; border-top-color: #CC0000;" id="banner">
+Banner de pruba
+<p  id="cerrar">Cerrar</p>
+</div>
+
+<div id="carrete">
+      <img src="img/atleticonacional.jpg" id="imagen1">
+      <img src="img/fitnescolombia.jpg" id="imagen2">
+      <img src="img/fitnesdeportes.jpg" id="imagen3">
+      <img src="img/beagle.jpg" id="imagen4">	
+</div>
+<!--<button id="precion">precion</button>-->
+</body>
+</html>

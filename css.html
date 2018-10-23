@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Curso JavaScript desde 0. JQuery IX. Leyendo y cambiando atributos CSS I Vídeo 37 </title>
+
+	<style>
+		#primer_parrafo{
+			background-color:#red;
+
+		}
+	</style>
+
+
+<script type="text/javascript" src="jquery/jquery-3.2.1.js"></script>
+
+
+	<script type="text/javascript">
+
+       $(document).ready(function(){
+       	//$('#precion').onclick()
+       	  var colorFondo=$("#primer_parrafo").css("background-color");//Solo se toma el valor de la propiedad.
+          //var colorFondo=$("#primer_parrafo").css("background-color","#00F"); se remplaza el valor de la propiedad 
+          $("p.destacado").css("border","2px dotted blue"); 
+       	alert(colorFondo);
+       });
+
+	</script>
+</head>
+<body>
+<p id="primer_parrafo"> Primer Parrafo</p>
+<p class="destacado"> Parrafo Destacado</p>
+<p> Tercer parrafo</p>
+
+
+</body>
+</html>

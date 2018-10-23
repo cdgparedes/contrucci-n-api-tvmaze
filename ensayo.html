@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript">
+  		function agregar(){
+  			var usuario=document.getElementById('usuario');
+  			var texto=document.getElementById('chat');
+  			//alert(usuario.value + ":" + texto.value);
+  			document.getElementById('charla2').innerHTML=usuario.value + ": " + texto.value;
+
+
+  		}
+
+  		function agregar2(){
+  			var usuario2=document.getElementById('usuario2');
+  			var texto2=document.getElementById('chat2');
+  			//alert(usuario.value + ":" + texto.value);
+  			document.getElementById('charla').innerHTML=usuario2.value + ": " + texto2.value;
+
+
+  		}
+        
+        $("#enviar").click(function(){
+        alert("hola");
+
+
+
+        });
+ 	</script>	
+ </head>
+ <body>
+   <fieldset>
+   	<form>
+   		
+   	 <div  style="width:400px;border-style:double; float:left">	
+       <input type="text" id="usuario" placeholder="Nombre ususario"><br>
+
+       <textarea  id="chat" placeholder="Ingrese texto"></textarea><br>
+       <input type="button" id="enviar" value="enviar" onClick="agregar()">
+       <fieldset style="width:400px;height:70px">
+   		<div id="charla">
+   	    </div>	
+   	   </fieldset>	
+     </div>	
+
+
+     <div style="width:400px;border-style:solid;float:right">
+     <label> Usuario 2</label><br>	
+       <input type="text" id="usuario2" placeholder="Nombre ususario"><br>
+
+       <textarea  id="chat2" placeholder="Ingrese texto"></textarea><br>
+       <input type="button" id="enviar2" value="enviar" onClick="agregar2()">
+       <fieldset style="width:400px;height:70px">
+   		<div id="charla2">
+   		</div>	
+   	</fieldset>	
+     </div>	
+
+    </form>		
+
+   </fieldset>
+
+  
+   	
+   	
+
+ </body>	
